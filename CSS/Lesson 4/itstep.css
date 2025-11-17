@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    background-color: black;
+    padding: 15px 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.header a {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    font-family: sans-serif;
+    top: 15px; 
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+.bgimage {
+   background-image: url(/udarenie-v-slove-kody.jpg);
+  
+   height: 100vh;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+
+

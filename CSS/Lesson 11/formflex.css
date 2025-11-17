@@ -1,0 +1,52 @@
+img {
+    width: 100px;
+}
+
+html, body, {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: rgb(12, 12, 186);
+    width: 180px;
+    color: white;
+    padding: 7px;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type="email"]{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 45px;
+}
+
+form input[type="password"]{
+    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 45px;
+}
+
+form input:focus {
+    border-radius: 0;
+}
+
+.checbox {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    
+}
+

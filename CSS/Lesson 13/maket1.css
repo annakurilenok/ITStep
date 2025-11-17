@@ -1,0 +1,17 @@
+.header {
+    background-color: #313131;
+    height: 72px;
+}
+
+.apple {
+    display: block;
+    height: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background-color: #7d7d7d;
+}

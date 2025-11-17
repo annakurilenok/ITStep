@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+    <style>
+        label {
+            display: block;
+        }
+         textarea {
+            resize: none;
+         }
+    </style>
+</head>
+<body>
+    <form action="/HTML/lesson1/index.html" method="get">
+        <div>
+            <label for="fio">Введите Ф.И.О.</label>
+             <input id="fio" type="text" name="fio" placeholder="Введите Ф.И.О." required/>
+        </div>
+        <div>
+            <label for="">Введите email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">Введите дату рождения</label>
+            <input type="date" name="birtday" required>
+        </div>
+        <div>
+            <label for="">Введите адрес аккаунта Github</label>
+            <input type="url" name="github">
+        </div>
+        <div><label for="">Загрузите резюме</label>
+            <input type="file" name="cv"> <br>
+        </div>
+        <div>
+            <label for="">Выберите пол</label>
+            <input type="radio" name="gender" value="male"> Мужской <br>
+        <input type="radio" name="gender" value="male"> Женский 
+        </div>
+        <div>
+            <label for="">Ваше образование</label>
+            <input type="checkbox" name="grade[]" value="Базовое" checked> Базовое <br>
+            <input type="checkbox" name="grade[]" value="Среднее"> Среднее <br>
+            <input type="checkbox" name="grade[]" value="Высшее"> Высшее <br>
+        </div>
+        <div>
+            <label for="">Придумайте пароль</label>
+            <input type="password" name="password" required>
+        </div>
+        <div>
+            <label for="">Расскажите о себе</label>
+            <textarea name="about" cols="15" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="">Выберите желаемую доолжность</label>
+            <select name="rank" id=""> <!--Выпадающий список-->
+                <optgroup label="Высший менеджмент">
+                    <option value="director">Директор</option>
+                    <option value="manager">Менеджер</option>
+                </optgroup>
+                <optgroup label="Работники">
+                    <option value="master">Мастер</option>
+                <option value="cleaner">Уборщик</option>
+                </optgroup>
+            </select>
+        </div>
+        
+        <br>
+        
+        <input type="color">
+        <br>
+        <!--<input type="submit" value="Отправить">-->
+        <button type="submit">Отправить
+
+        </button>
+    </form>
+</body>
+</html>

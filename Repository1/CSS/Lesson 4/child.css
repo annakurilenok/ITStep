@@ -1,0 +1,65 @@
+:root {
+    --color-black: red;
+    --position: relative;
+    --size: 200px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.container div {
+    border: 2px solid var(--color-black);
+    width: var(--size, 100px);
+    height: var(--size, 100px);
+    /*border-bottom: none;*/
+    border-radius: 50%;
+}
+
+.container div:last-child {
+    --color-black: blue;
+    border-bottom: 2px solid var(--color-black);
+    background-color: green;
+}
+
+.container div:nth-child(3) {
+    background-color: yellow;
+}
+
+.container div:first-child {
+    background-color: red;
+}
+
+/*.container div:nth-child(even) { каждый четный потомок
+    border-radius: 0 !important; 
+}*/
+
+.container div:nth-child(2n) { /* каждый второй элемент*/
+    border-radius: 0 !important; 
+}
+
+
+/*.container div:nth-child(odd) { каждый нечетный потомок
+    position: relative;
+    left: 50px;
+}*/
+
+.container div:nth-child(2n-1) { /* каждый второй элемент минус 1*/
+    position: relative;
+    left: 50px;
+}
+
+.container div:nth-child(-n+3) { /* n равно 0*/
+    display: inline-block;
+}
+
+.container div:nth-child(n+4) { 
+    display: inline-block;
+}
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+.conainer {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.conainer p {
+    border: 2px solid blue;
+    background-color: yellow;
+    padding: 5px;
+    margin-top: 0;
+}
+
+.conainer p.bg_red {
+    background-color: red;
+    width: 50%;
+}
+
+.positioned {
+    position: absolute;
+    left: 65%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -37.5px !important;
+    z-index: 1;
+}
+
+.fixed {
+    background-color: blueviolet !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+}

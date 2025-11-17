@@ -1,0 +1,46 @@
+@import 'normalize';
+@import 'body';
+@import 'mixins';
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include transform(translateX(50px));
+
+    li{
+        a{
+            text-decoration: none;
+        }
+
+        &:first-child {
+             a{
+                color: brown;
+            }
+        }
+    }
+}
+
+%display_flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%square_block {
+    width: 200px;
+    height: 200px;
+}
+
+.block {
+    @extend %square_block;
+    background-color: white;
+    @include transform(rotate(30deg));
+}
+
+.blue-block {
+    @extend %square_block;
+    @extend %display_flex_center;
+    background-color: aqua;
+}

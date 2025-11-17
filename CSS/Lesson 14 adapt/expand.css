@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: rgb(47, 44, 44);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 7px 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    display: block;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    color: rgb(151, 151, 151);
+}
+
+.header nav a:hover {
+    color: rgb(183, 183, 183);
+}
+
+.header input {
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    margin-left: auto;
+}
+
+.header nav li ul {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    background-color: white;
+    width: 190px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.sendwich {
+    display: none;
+    width: 60px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sendwich span {
+    background-color: gray;
+    height: 2px;
+    width: 40px;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown ul {
+    position: absolute;
+    left: 0;
+    top: 150%;
+    overflow: hidden;
+    transform: translateY(-30px);
+}
+
+.dropdown ul li a {
+    display: block;
+    padding: 5px 15px;
+    transition: all 0.2s linear;
+}
+
+.dropdown ul li {
+    width: 100%;
+}
+
+.dropdown ul li a:hover {
+    background-color: lightgray;
+}
+
+.dropdown:hover ul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown > a::after {
+    display: block;
+    content: " ";
+    width: 0;
+    border-top: 5px solid gray;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transition: all 0.3s linear;
+}
+
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+
+.dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 992px) {
+    .header nav {
+        display: none;
+    }
+
+    header input {
+        display: none;
+    }
+
+    .sendwich {
+        display: flex;
+        margin-left: auto;
+    }
+}
