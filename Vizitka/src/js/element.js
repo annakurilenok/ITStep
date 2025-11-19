@@ -2,9 +2,9 @@ class Element {
     constructor(elemName) {
         this.name = elemName;
         this.classes = [];
-        this.id = "";
+        this.id = null;
         this.childrens = [];
-        this.css = [];
+        this.css = {};
     }
 
     addClasses(...classes) {
@@ -26,22 +26,54 @@ class Element {
         }
     }
 
+     addStyles(styles) {
+        Object.assign(this.css, styles);
+    }
+
+    appendChilds(...childs) {
+        for(let c of childs) {
+            this.childrens.push(c);
+        }
+    
+    }
+
+    deleteStyles(...styles) {
+        for(let key of styles) {
+            delete this.css[key];
+        }
+    }
+
     setId(id) {
         this.id = id;
     }
 
-    render(parentElement) {
+    createDomElement() {
         let el = document.createElement(this.name);
+        if(this.id) {
+            el.id = this.id;
+        }
         el.id = this.id;
         
         for(let cl of this.classes) {
             el.classList.add(cl);
         }
+        //el.style.border = "1px solid black";
+        // el.style['border'] = "1px solid black";
+        // console.dir(el);
+        for(let key in this.css) {
+            let styleName = key;
+            let styleValue = this.css[key];
 
-        console.dir(el);
-        parentElement.append(el);
+            el.style[styleName] = styleValue;
+            //el.style[key] = this.css[key];
+        }
+
+        for(let child of this.childrens) {
+            el.append(child.createDomElement());
+        }
+
+        return el;
     }
-
 }
 
 export default Element;
