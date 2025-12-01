@@ -77,3 +77,6 @@ button.addEventListener('click', () => {
         num = Math.floor(Math.random() * 10) + 1;
     });
 });
+
+
+
