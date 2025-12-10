@@ -19,6 +19,8 @@ const courses = {
 
 
 
+
+
 console.log(fetch("https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR,RUB,BYN"));
 
 let myHeaders = new Headers();
