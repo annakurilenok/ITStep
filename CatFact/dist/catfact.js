@@ -1,0 +1,1 @@
+fetch("https://catfact.ninja/fact").then(t=>{if(!t.ok)throw new Error(`HTTP error! status: ${t.status}`);return t.json()}).then(t=>{console.log(t)}).catch(t=>{console.error("Ошибка при загрузке данных:",t)});

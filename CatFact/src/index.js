@@ -1,0 +1,24 @@
+
+
+  fetch('https://catfact.ninja/fact') 
+  .then(response => {
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json(); 
+  })
+  .then(data => {
+    console.log(data);
+    
+  })
+  .catch(error => {
+    console.error('Ошибка при загрузке данных:', error); 
+  });
+
+function render(fact) {
+  const div = $('.card');
+}
+  
+
+  
