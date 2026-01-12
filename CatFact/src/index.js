@@ -17,7 +17,7 @@
   });
 
 function render(fact) {
-  const div = $('.card');
+  const div = q
 }
   
 
