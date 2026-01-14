@@ -1,18 +1,18 @@
 import Button from "./Button";
 
-function List(){
-    const products = [
-  { title: 'Cabbage', isFruit: false, id: 1 },
-  { title: 'Garlic', isFruit: false, id: 2 },
-  { title: 'Apple', isFruit: true, id: 3 },
-];
-
-const listItems = products.map(product =>
-  <li key={product.id} style={{color:product.isFruit ? 'magenta' : 'darkgreen'}}>
-    {product.title}
-  </li>
+function List({items}){
+    
+const listItems = items.map(product =>
+  <ListItem item={product} key={product.id} />
 );
-    return(<ul>{listItems }</ul>);
+
+  return(<ul>{listItems }</ul>);
+}
+
+function ListItem({item}) {
+  return(
+    <li style={{color: item.isFruit ? 'magenta' : 'darkgreen'}}>{item.title}</li>
+  )
 }
 
 function MainPage() {
@@ -21,12 +21,20 @@ function MainPage() {
         text: 'Страница о нас'
     }
 
+    const products = [
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
+];
+
+
   return (
     <>
     <h1>{content.title}</h1>
     <p>{content.text}</p>
-    <Button />
-    <List />
+    <Button startCount={5} btnClass='btn-danger' step={1} />
+    <Button startCount={3} btnClass='btn-info' step={3} />
+    <List items={products} />
     </>
   );
 }
