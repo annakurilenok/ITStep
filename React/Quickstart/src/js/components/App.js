@@ -1,20 +1,23 @@
-// import Button from "./Button";
-import AboutPage from "./AboutPage";
 import MainPage from "./MainPage";
+import AboutPage from "./AboutPage";
 
 function App() {
-    let ismainPage = true;
-    let component;
-    if(ismainPage) {
-        component = <MainPage />;
-    }else {
+    let isMainPage = true;
+    //let component;
+
+    /*if(isMainPage) {
+        component = <MainPage/>;
+    } else {
         component = <AboutPage />;
-    }
-  return (
-    <div>
-      {component}
-    </div>
-  );
+    }*/
+
+    return (
+      <div>
+        {
+            isMainPage ? (<MainPage/>) : (<AboutPage />)
+        }
+      </div>
+    );
 }
 
 export default App;

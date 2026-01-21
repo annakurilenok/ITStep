@@ -1,0 +1,77 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \**************************************************************************************************************/
+html, body {
+  background-color: #02031e;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #ddd0d0;
+  background-color: #2a2c5f;
+  padding: 10px;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+h1 {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px 15px 10px 10px;
+  color: #fff;
+}
+
+.new-task {
+  width: 500px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #0b0d39;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.task::placeholder {
+  color: #fff;
+  padding: 7px;
+}
+
+.app {
+  height: 40px;
+  border-radius: 10px;
+  background-color: #0b0d39;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tasks {
+  width: 540px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #0b0d39;
+  color: #fff;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}

@@ -34,4 +34,5 @@ module.exports = {
       filename: 'index.css', //'[name].[hash].css'
     })
   ],
+   
 };
