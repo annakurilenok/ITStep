@@ -3,6 +3,9 @@ import Paragraph from './Paragraph';
 import Button from './Button';
 import Title from './Title';
 import Card from './Card';
+import Timer from './Timer';
+import TextInput from './TextInput';
+import LoginForm from './LoginForm';
 
 const products = [
     {id:1, name:'Название товара 1', image: 'https://flowertimes.ru/wp-content/uploads/2021/10/buk-derevo.jpg', text: 'какой-то текст'},
@@ -23,6 +26,9 @@ function App () {
 
     return (
         <>
+        <LoginForm />
+        <Timer />
+        <TextInput value={10} />
         <Counter />
         <Button label='Нажми меня!' handClick={() => alert('Кнопка нажата!')}  />
         <Title level={1} text={'Это заголовок'}/>
