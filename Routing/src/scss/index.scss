@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+body > div {
+    width: 50%;
+    border: 1px solid black;
+    flex-shrink: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.menu  {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    color: rebeccapurple;
+    width: 100px;
+    height: 45px;
+    background-color: aqua;
+}
+
+.menu a.active {
+    color: palevioletred;
+}
